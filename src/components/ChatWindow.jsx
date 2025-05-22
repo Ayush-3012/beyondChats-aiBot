@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import Sidebar from "./Sidebar";
 import MessageInput from "./MessageInput";
 import Loader from "./Loader";
+import Suggestions from "./Suggestions";
 
 const ChatWindow = () => {
   const [input, setInput] = useState("");
@@ -22,7 +23,7 @@ const ChatWindow = () => {
     setInput("");
     setLoading(true);
 
-    const botReply = await sendMessageToBot(input);
+    const botReply = await sendMessageToBot(userInput);
     const botMsg = { sender: "bot", text: botReply };
     setMessages((prev) => [...prev, botMsg]);
     setLoading(false);
@@ -108,6 +109,9 @@ const ChatWindow = () => {
             ))}
             {loading && <Loader darkMode={darkMode} />}
           </div>
+
+          {/* Suggestions */}
+          <Suggestions setInput={setInput} handleSend={handleSend} />
 
           {/* Input */}
           <MessageInput
