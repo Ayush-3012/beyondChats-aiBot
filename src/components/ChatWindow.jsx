@@ -111,7 +111,7 @@ const ChatWindow = () => {
           </div>
 
           {/* Suggestions */}
-          <Suggestions setInput={setInput} handleSend={handleSend} />
+          {!input && <Suggestions handleSend={handleSend} />}
 
           {/* Input */}
           <MessageInput

@@ -1,6 +1,6 @@
 import { chatStarters } from "../utils/mockdata";
 
-const Suggestions = ({ setInput, handleSend }) => {
+const Suggestions = ({ handleSend }) => {
   const getRandomSuggestions = () => {
     const allQuestions = [
       ...chatStarters.learning,
@@ -13,7 +13,7 @@ const Suggestions = ({ setInput, handleSend }) => {
   };
 
   const suggestions = getRandomSuggestions();
-
+  console.log(suggestions);
   return (
     <>
       <div className="flex flex-wrap my-1 gap-4 items-center justify-center">
@@ -22,7 +22,6 @@ const Suggestions = ({ setInput, handleSend }) => {
             key={index}
             className="rounded-lg cursor-pointer hover:-translate-y-1 duration-150 transition-all px-2 py-1 shadow-[1px_1px_5px] hover:shadow-[1px_1px_20px] shadow-emerald-600"
             onClick={(e) => {
-              setInput(item);
               handleSend(e, item);
             }}
           >
