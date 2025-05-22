@@ -21,6 +21,7 @@ It delivers grammatically correct and professional responses in real-time, with 
 
 ![Logo](./public/chatbot_logo.png)
 ![UI Preview](./public/image.png)
+![UI Preview](./public/image-2.png)
 
 ---
 
