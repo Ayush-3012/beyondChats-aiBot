@@ -20,7 +20,7 @@ const Suggestions = ({ setInput, handleSend }) => {
         {suggestions?.map((item, index) => (
           <button
             key={index}
-            className="rounded-lg cursor-pointer hover:scale-x-110 duration-150 transition-all px-2 py-1 shadow-[1px_1px_5px] shadow-emerald-600"
+            className="rounded-lg cursor-pointer hover:-translate-y-1 duration-150 transition-all px-2 py-1 shadow-[1px_1px_5px] hover:shadow-[1px_1px_20px] shadow-emerald-600"
             onClick={(e) => {
               setInput(item);
               handleSend(e, item);
